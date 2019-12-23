@@ -8,7 +8,7 @@ export default function List(props) {
                 return (
                     <div key={index}>
                         <Item 
-                            index={index}
+                            index={`${index}`}
                             item={item} 
                             onChange={props.onChange} 
                             onClick={props.onClick} 

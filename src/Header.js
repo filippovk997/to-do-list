@@ -8,12 +8,18 @@ import { green } from '@material-ui/core/colors';
 
 
 const useStyles = makeStyles(theme => ({
+    container: {
+        width: 430,
+        borderBottom: "1px solid #a9a6a6"
+    },
     formControl: {
         margin: theme.spacing(1),
+        width: 330
     },
     button: {
         margin: theme.spacing(1),
-        // padding: theme.spacing(1),
+        padding: theme.spacing(2),
+        width: 0
     }
 }));
 
@@ -28,7 +34,7 @@ export default function Header(props) {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.container}>
             <FormControl className={classes.formControl} variant="outlined">
                 <InputLabel ref={label.ref} htmlFor="component-outlined">
                     Task
