@@ -1,19 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import List from './List';
+import axios from 'axios';
 
-export default function App() {
+
+export default function Container() {
     const [task, setTask] = useState("");
     const [items, setItems] = useState([]);
-
+    axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+    
     const handleChangeTask = (event) => {
         setTask(event.target.value);
     };
+    useEffect(() => {
+        axios.get(`${axios.defaults.baseURL}`)
+        .then(response => {
+            setItems(response.data);
+        });
+    }, [])
 
     const handleClickAdd = (value) => {
         if (value === "")
             return;
-        setItems(items.concat({ value: value, checked: false }));
+
+        axios.post(`${axios.defaults.baseURL}`, { 
+                value: value, 
+                checked: false 
+            })
+            .then(response => {
+                setItems(items.concat(response.data));
+            });  
+
         setTask("");
     };
 
@@ -24,6 +41,9 @@ export default function App() {
 
     const handleChangeChecked = (event) => {
         setItems(items.map((item, index) => {
+            if (index == event.target.name) {
+                axios.patch(`${axios.defaults.baseURL}/${(item.id)}`, { checked: event.target.checked });
+            }
             item.checked = (index == event.target.name) ? event.target.checked : item.checked;
             return item;
         }));
@@ -31,13 +51,17 @@ export default function App() {
 
     const handleChangeItems = (event) => {
         setItems(items.map((item, index) => {
+            if (index == event.target.name)
+                axios.patch(`${axios.defaults.baseURL}/${(item.id)}`, { value: event.target.value });
             item.value = (index == event.target.name) ? event.target.value : item.value;
             return item;
         }));
     };
 
     const handleClickRemove = (index) => {
-        setItems(items.filter((item, ind) => ind != index));
+        setItems(items.filter((item, ind) => { 
+            return !(ind == index && axios.delete(`${axios.defaults.baseURL}/${(item.id)}`));
+        }));
     };
 
     return (
