@@ -8,15 +8,15 @@ import ClearIcon from '@material-ui/icons/Clear';
 import { red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
+    checkbox: {
+      margin: theme.spacing(1),  
+    },
     input: {
-        margin: theme.spacing(1),
+        // margin: theme.spacing(1),
+        width: 300,
     },
     button: {
         margin: theme.spacing(1),
-        // padding: theme.spacing(1),
-    },
-    icon: {
-        primary: red,
     }
 }));
 
@@ -34,6 +34,7 @@ export default function Item(props) {
             <FormControlLabel 
                 control={
                     <Checkbox 
+                        className={classes.checkbox}
                         name={props.index} 
                         checked={props.item.checked} 
                         onChange={props.onChange.Checked}

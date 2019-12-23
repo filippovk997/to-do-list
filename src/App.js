@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
 import List from './List';
 import axios from 'axios';
 
+const useStyles = makeStyles(theme => ({
+    container: {
+        width: 430,
+        boxShadow: "1px 0px 5px 0px #4e4e4e"
+    },
+}));
 
 export default function Container() {
     const [task, setTask] = useState("");
     const [items, setItems] = useState([]);
+    
     axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+    const classes = useStyles();
     
     const handleChangeTask = (event) => {
         setTask(event.target.value);
@@ -65,7 +74,7 @@ export default function Container() {
     };
 
     return (
-        <div>
+        <div className={classes.container}>
             <Header 
                 task={task} 
                 onChange={handleChangeTask} 
