@@ -7,7 +7,7 @@ import axios from 'axios';
 const useStyles = makeStyles(theme => ({
     container: {
         width: 430,
-        boxShadow: "1px 0px 5px 0px #4e4e4e",
+        boxShadow: "1px 0px 5px 0px #4e4e4e"
     },
 }));
 

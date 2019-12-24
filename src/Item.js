@@ -12,6 +12,10 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(1),  
     },
     input: {
+<<<<<<< HEAD
+=======
+        // margin: theme.spacing(1),
+>>>>>>> 3b91c64582003145fd22c72f210838b8aa79582e
         width: 300,
     },
     button: {
