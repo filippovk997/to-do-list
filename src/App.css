@@ -6,15 +6,27 @@
 }
 .main {
   width: 500px;
+  max-height: 440px;
   padding: 0;
   margin: 0 auto;
   background: rgb(168, 255, 128);
 }
 button {
   outline: none;
-  transition: .2s ease-out;
 }
 button:hover {
+  transition: .2s ease-out;
   border: 1px solid rgb(136, 136, 136);
   background: rgb(235, 255, 224);
+}
+button:active {
+  transition: .2s ease-out;
+  border: 1px solid rgb(224, 224, 224);
+  background: rgb(199, 255, 173);
+}
+@media (min-width: 1440px) {
+.main {
+  width: 600px;
+  max-height: 528px;
+}
 }

@@ -1,0 +1,12 @@
+.list {
+    overflow: auto;
+    width: 515px;
+    max-height: 370px;
+}
+@media (min-width: 1440px) {
+.list {
+    overflow: auto;
+    width: 618px;
+    max-height: 444px;
+}
+}
