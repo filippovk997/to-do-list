@@ -1,0 +1,21 @@
+.header {
+    width: 500px;
+    padding: 10px 0;
+}
+.header input {
+    width: 400px;
+    height: 50px;
+    padding-left: 10px;
+    margin-left: 10px;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+.header button {
+    width: 80px;
+    height: 50px;
+    margin-left: 2px;
+    border: 1px solid silver;
+    border-radius: 7px;
+    background: white;
+}

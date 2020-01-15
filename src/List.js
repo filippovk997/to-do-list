@@ -1,9 +1,10 @@
 import React from 'react';
 import Item from './Item';
+import './List.css';
 
 export default function List(props) {
     return (
-        <div>
+        <div className="list">
             {props.items.map((item, index) => {
                 return (
                     <div key={index}>
