@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from './Item';
-import './List.css';
+import './List.scss';
 
 export default function List(props) {
     return (

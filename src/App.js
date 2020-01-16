@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import List from './List';
 import axios from 'axios';
-import './App.css';
+import './App.scss';
 
 export default function App() {
     const [task, setTask] = useState("");
