@@ -14,8 +14,13 @@ export default function Item(props) {
                 value={props.item.value} 
                 onChange={props.onChange.Items}
             />
+            <span
+                className={(props.item.favorite)?"favorite":"icon"} 
+                onClick={() => { props.onClick.Favorite(props.index); }}
+            >
+            </span>
             <button 
-                onClick={() => { props.onClick(props.index); }}
+                onClick={() => { props.onClick.Remove(props.index); }}
             >
                 X
             </button>

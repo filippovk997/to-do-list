@@ -4,6 +4,34 @@
     &:last-child {
         padding-bottom: 10px;
     }
+    .icon {
+        position: absolute;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        margin: 11px;
+        margin-left: 8px;
+        transition: {
+            duration: .2s;
+            timing-function: ease-out;
+        }
+        background-image: url(./icons/star_border-24px.svg);
+
+        &:hover {
+            background-image: url(./icons/star_half-24px.svg);
+        }
+        &:active {
+            background-image: url(./icons/star-24px.svg);
+        }
+    }
+    .favorite {
+        @extend .icon;
+        
+        background-image: url(./icons/star-24px.svg);
+        &:active {
+            background-image: url(./icons/star_border-24px.svg);
+        }
+    }
     input[type=checkbox] {
         position: relative;
         float: left;
@@ -15,7 +43,7 @@
         border-radius: 5px;
     }
     input[type=text] {
-        width: 400px;
+        width: 360px;
         height: 50px;
         padding-left: 10px;
         outline: none;
@@ -23,9 +51,11 @@
         border-radius: 5px;
     }
     button {
+        position: absolute;
         width: 30px;
         height: 30px;
-        margin-left: 10px;
+        margin: 10px;
+        margin-left: 43px;
         border: 1px solid silver;
         border-radius: 7px;
         background-color: white;

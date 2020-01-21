@@ -26,11 +26,12 @@ export default function App() {
 
         axios.post(`${axios.defaults.baseURL}`, { 
                 value: value, 
-                checked: false 
+                checked: false,
+                favorite: false 
             })
             .then(response => {
                 setItems(items.concat(response.data));
-            });  
+            });
 
         setTask("");
     };
@@ -52,11 +53,24 @@ export default function App() {
 
     const handleChangeItems = (event) => {
         setItems(items.map((item, index) => {
-            if (index == event.target.name)
+            if (index == event.target.name) {
                 axios.patch(`${axios.defaults.baseURL}/${(item.id)}`, { value: event.target.value });
+            }
             item.value = (index == event.target.name) ? event.target.value : item.value;
             return item;
         }));
+    };
+
+    const handleClickFavorite = (index) => {
+        setItems(items.map((item, ind) => {
+            if (index == ind) {
+                axios.patch(`${axios.defaults.baseURL}/${(item.id)}`, { favorite: !item.favorite });
+                console.log(axios.get(`${axios.defaults.baseURL}/${(item.id)}`));
+            }
+            item.favorite = (index == ind) ? !item.favorite : item.favorite;
+            return item;
+        }));
+        console.log(items);
     };
 
     const handleClickRemove = (index) => {
@@ -77,7 +91,7 @@ export default function App() {
             <List 
                 items={items} 
                 onChange={{Checked: handleChangeChecked, Items: handleChangeItems}} 
-                onClick={handleClickRemove} 
+                onClick={{Favorite: handleClickFavorite, Remove: handleClickRemove}}
             />
         </div>
     );
