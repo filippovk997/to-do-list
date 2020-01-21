@@ -9,21 +9,30 @@
   max-height: 440px;
   padding: 0;
   margin: 0 auto;
-  background: rgb(168, 255, 128);
+  background-color: rgb(168, 255, 128);
 }
 button {
   outline: none;
+
+  &:hover {
+    transition: {
+      duration: .2s;
+      timing-function: ease-out;
+    }
+    border: 1px solid rgb(136, 136, 136);
+    background-color: rgb(235, 255, 224);
+  }
+
+  &:active {
+    transition: {
+      duration: .2s;
+      timing-function: ease-out;
+    }
+    border: 1px solid rgb(224, 224, 224);
+    background-color: rgb(199, 255, 173);
+  }
 }
-button:hover {
-  transition: .2s ease-out;
-  border: 1px solid rgb(136, 136, 136);
-  background: rgb(235, 255, 224);
-}
-button:active {
-  transition: .2s ease-out;
-  border: 1px solid rgb(224, 224, 224);
-  background: rgb(199, 255, 173);
-}
+
 @media (min-width: 1440px) {
 .main {
   width: 600px;

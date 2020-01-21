@@ -2,45 +2,48 @@
     width: 500px;
     height: 70px;
     padding: 10px 0;
+
+    input {
+        width: 400px;
+        height: 50px;
+        padding-left: 10px;
+        margin-left: 10px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 5px;
+    }
+    button {
+        width: 80px;
+        height: 50px;
+        margin-left: 5px;
+        border: 1px solid silver;
+        border-radius: 7px;
+        background-color: white;
+    }
 }
-.header input {
-    width: 400px;
-    height: 50px;
-    padding-left: 10px;
-    margin-left: 10px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 5px;
-}
-.header button {
-    width: 80px;
-    height: 50px;
-    margin-left: 5px;
-    border: 1px solid silver;
-    border-radius: 7px;
-    background: white;
-}
+
 @media (min-width: 1440px) {
 .header {
     width: 600px;
     height: 84px;
     padding: 12px 0;
-}
-.header input {
-    width: 480px;
-    height: 60px;
-    padding-left: 12px;
-    margin-left: 12px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 6px;
-}
-.header button {
-    width: 96px;
-    height: 60px;
-    margin-left: 6px;
-    border: 1px solid silver;
-    border-radius: 8px;
-    background: white;
+
+    input {
+        width: 480px;
+        height: 60px;
+        padding-left: 12px;
+        margin-left: 12px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 6px;
+    }
+    button {
+        width: 96px;
+        height: 60px;
+        margin-left: 6px;
+        border: 1px solid silver;
+        border-radius: 8px;
+        background-color: white;
+    }
 }
 }

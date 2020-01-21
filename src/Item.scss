@@ -1,63 +1,67 @@
 .item {
     padding-bottom: 2px;
+
+    &:last-child {
+        padding-bottom: 10px;
+    }
+    input[type=checkbox] {
+        position: relative;
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 5px;
+    }
+    input[type=text] {
+        width: 400px;
+        height: 50px;
+        padding-left: 10px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 5px;
+    }
+    button {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        border: 1px solid silver;
+        border-radius: 7px;
+        background-color: white;
+    }
 }
-.item:last-child {
-    padding-bottom: 10px;
-}
-.item input[type=checkbox] {
-    position: relative;
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 5px;
-}
-.item input[type=text] {
-    width: 400px;
-    height: 50px;
-    padding-left: 10px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 5px;
-}
-.item button {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    border: 1px solid silver;
-    border-radius: 7px;
-    background: white;
-}
+
 @media (min-width: 1440px) {
-.item:last-child {
-    padding-bottom: 12px;
-}
-.item input[type=checkbox] {
-    position: relative;
-    float: left;
-    width: 36px;
-    height: 36px;
-    margin: 12px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 6px;
-}
-.item input[type=text] {
-    width: 480px;
-    height: 60px;
-    padding-left: 12px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 6px;
-}
-.item button {
-    width: 36px;
-    height: 36px;
-    margin-left: 12px;
-    border: 1px solid silver;
-    border-radius: 8px;
-    background: white;
+.item {
+    &:last-child {
+        padding-bottom: 12px;
+    }
+    input[type=checkbox] {
+        position: relative;
+        float: left;
+        width: 36px;
+        height: 36px;
+        margin: 12px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 6px;
+    }
+    input[type=text] {
+        width: 480px;
+        height: 60px;
+        padding-left: 12px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 6px;
+    }
+    button {
+        width: 36px;
+        height: 36px;
+        margin-left: 12px;
+        border: 1px solid silver;
+        border-radius: 8px;
+        background-color: white;
+    }
 }
 }
