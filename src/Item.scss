@@ -1,39 +1,12 @@
 .item {
+    display: inline-block;
     padding-bottom: 2px;
 
     &:last-child {
         padding-bottom: 10px;
     }
-    .icon {
-        position: absolute;
-        cursor: pointer;
-        width: 28px;
-        height: 28px;
-        margin: 11px;
-        margin-left: 8px;
-        transition: {
-            duration: .2s;
-            timing-function: ease-out;
-        }
-        background-image: url(./icons/star_border-24px.svg);
 
-        &:hover {
-            background-image: url(./icons/star_half-24px.svg);
-        }
-        &:active {
-            background-image: url(./icons/star-24px.svg);
-        }
-    }
-    .favorite {
-        @extend .icon;
-        
-        background-image: url(./icons/star-24px.svg);
-        &:active {
-            background-image: url(./icons/star_border-24px.svg);
-        }
-    }
     input[type=checkbox] {
-        position: relative;
         float: left;
         width: 30px;
         height: 30px;
@@ -43,6 +16,7 @@
         border-radius: 5px;
     }
     input[type=text] {
+        float: left;
         width: 360px;
         height: 50px;
         padding-left: 10px;
@@ -50,12 +24,42 @@
         border: 1px solid silver;
         border-radius: 5px;
     }
+
+    .icon {
+        float: left;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        margin-top: 11px;
+        margin-left: 10px;
+        transition: {
+            duration: .2s;
+            timing-function: ease-out;
+        }
+        background-image: url(./icons/star_border-28px.svg);
+
+        &:hover {
+            background-image: url(./icons/star_half-28px.svg);
+        }
+        &:active {
+            background-image: url(./icons/star-28px.svg);
+        }
+    }
+    .favorite {
+        @extend .icon;
+        
+        background-image: url(./icons/star-28px.svg);
+
+        &:active {
+            background-image: url(./icons/star_border-28px.svg);
+        }
+    }
+
     button {
-        position: absolute;
         width: 30px;
         height: 30px;
-        margin: 10px;
-        margin-left: 43px;
+        margin-top: 10px;
+        margin-left: 10px;
         border: 1px solid silver;
         border-radius: 7px;
         background-color: white;
@@ -67,31 +71,55 @@
     &:last-child {
         padding-bottom: 12px;
     }
+
     input[type=checkbox] {
-        position: relative;
-        float: left;
         width: 36px;
         height: 36px;
         margin: 12px;
-        outline: none;
-        border: 1px solid silver;
         border-radius: 6px;
     }
     input[type=text] {
-        width: 480px;
+        width: 432px;
         height: 60px;
         padding-left: 12px;
-        outline: none;
-        border: 1px solid silver;
         border-radius: 6px;
     }
+
+    .icon {
+        width: 34px;
+        height: 34px;
+        margin-top: 13px;
+        margin-left: 12px;
+        background-image: url(./icons/star_border-34px.svg);
+
+        &:hover {
+            background-image: url(./icons/star_half-34px.svg);
+        }
+        &:active {
+            background-image: url(./icons/star-34px.svg);
+        }
+    }
+    .favorite {
+        width: 34px;
+        height: 34px;
+        margin-top: 13px;
+        margin-left: 12px;
+        background-image: url(./icons/star-34px.svg);
+
+        &:hover {
+            background-image: url(./icons/star_half-34px.svg);
+        }
+        &:active {
+            background-image: url(./icons/star_border-34px.svg);
+        }
+    }
+
     button {
         width: 36px;
         height: 36px;
+        margin-top: 12px;
         margin-left: 12px;
-        border: 1px solid silver;
         border-radius: 8px;
-        background-color: white;
     }
 }
 }
