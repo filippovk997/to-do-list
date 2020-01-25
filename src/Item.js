@@ -4,6 +4,11 @@ import './Item.scss';
 export default function Item(props) {
     return (
         <div className="item">
+            <div
+                className={(props.item.favorite)?"favorite":"icon"} 
+                onClick={() => { props.onClick.Favorite(props.index); }}
+            >
+            </div>
             <input className="input-checkbox" type="checkbox"
                 name={props.index} 
                 checked={props.item.checked} 
@@ -14,11 +19,6 @@ export default function Item(props) {
                 value={props.item.value} 
                 onChange={props.onChange.Items}
             />
-            <div
-                className={(props.item.favorite)?"favorite":"icon"} 
-                onClick={() => { props.onClick.Favorite(props.index); }}
-            >
-            </div>
             <button 
                 onClick={() => { props.onClick.Remove(props.index); }}
             >
