@@ -1,23 +1,16 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-.main {
-  width: 500px;
-  max-height: 440px;
-  padding: 0;
-  margin: 0 auto;
-  background-color: rgb(168, 255, 128);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
 }
 button {
   outline: none;
 
   &:hover {
     transition: {
-      duration: .2s;
-      timing-function: ease-out;
+        duration: .2s;
+        timing-function: ease-out;
     }
     border: 1px solid rgb(136, 136, 136);
     background-color: rgb(235, 255, 224);
@@ -25,17 +18,53 @@ button {
 
   &:active {
     transition: {
-      duration: .2s;
-      timing-function: ease-out;
+        duration: .2s;
+        timing-function: ease-out;
     }
     border: 1px solid rgb(224, 224, 224);
     background-color: rgb(199, 255, 173);
   }
 }
 
-@media (min-width: 1440px) {
-.main {
-  width: 600px;
-  max-height: 528px;
+.nav {
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+
+    li {
+        display: inline-block;
+        width: 250px;
+        height: 30px;
+        text-align: center;
+        color: white;
+
+        &:first-child {
+            color: #008a2e;
+            background-color: rgb(168, 255, 128);
+        }
+        &:last-child {
+            color: #551a8b;
+            background-color: lightblue;
+        }
+    }
 }
+.link {
+    display: block;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#link-currient-tasks {
+    &:active {
+        color: #000000;
+        background-color: rgb(199, 255, 173);
+    }
+}
+#link-completed-tasks {
+    &:active {
+        color: #000000;     
+        background-color: rgb(203, 224, 231);
+    }
 }
