@@ -6,7 +6,7 @@ export default function List(props) {
     return (
         <div className="list">
             {props.items.map((item, index) => {
-                if (item.favorite == true) {
+                if (item.checked == false && item.favorite == true) {
                     return (
                         <div key={index}>
                             <Item 
@@ -20,7 +20,7 @@ export default function List(props) {
                 }
             })}
             {props.items.map((item, index) => {
-                if (item.favorite == false) {
+                if (item.checked == false && item.favorite == false) {
                     return (
                         <div key={index}>
                             <Item 

@@ -1,0 +1,30 @@
+.completed-tasks {
+    overflow: auto;
+    width: 500px;
+    max-height: 370px;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: lightblue;
+
+    button {
+        outline: none;
+
+        &:hover {
+            transition: {
+                duration: .2s;
+                timing-function: ease-out;
+            }
+            border: 1px solid rgb(136, 136, 136);
+            background-color: rgb(224, 244, 255);
+        }
+
+        &:active {
+            transition: {
+                duration: .2s;
+                timing-function: ease-out;
+            }   
+            border: 1px solid rgb(224, 224, 224);
+            background-color: rgb(203, 224, 231);
+        }
+    }
+}
